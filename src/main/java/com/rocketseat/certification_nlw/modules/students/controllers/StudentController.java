@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rocketseat.certification_nlw.modules.students.UseCases.VerifyIfHasCertificationUseCase;
 import com.rocketseat.certification_nlw.modules.students.dto.VerifyIfHasCertificationDTO;
 
+
 @RestController
 @RequestMapping("/students")
 public class StudentController {
 
     @Autowired
     private VerifyIfHasCertificationUseCase verifyIfHasCertificationUseCase;
-
+    
     @PostMapping("/verifyIfHasCertification")
     public String verifyIfHasCertification(@RequestBody VerifyIfHasCertificationDTO entity) {
         // Email
